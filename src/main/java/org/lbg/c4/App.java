@@ -1,33 +1,24 @@
 package org.lbg.c4;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.LineNumberReader;
 
 /**
  * Hello world!
  */
 public class App {
     public static void main(String[] args) throws IOException {
-        int counter = 0;
-        int b;
+        InputStreamReader isr = new InputStreamReader(System.in);
+        LineNumberReader lnr = new LineNumberReader(isr);
 
         try {
-            while ((b = System.in.read()) != -1) {
-                System.out.println(Integer.toHexString(b));
-                counter++;
-            }
+            while (lnr.readLine() != null);
+            System.out.println("No of Lines: " + lnr.getLineNumber());
         } catch (IOException e) {
             System.out.println(e);
         }
-        System.out.println("No. of chars in ASCII: " + counter);
-        try {
-            while ((b = System.in.read()) != -1) {
-                System.out.println(Integer.toHexString(b));
-                counter++;
-            }
-        } catch (IOException e) {
-            System.out.println(e);
-        }
-        System.out.println("No. of chars in alpha: " + counter);
 
     }
 }
