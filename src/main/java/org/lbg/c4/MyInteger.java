@@ -1,2 +1,5 @@
-package org.lbg.c4;public class MyInteger {
+package org.lbg.c4;
+
+public class MyInteger {
+    public int data;
 }
