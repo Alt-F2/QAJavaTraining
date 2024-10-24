@@ -6,7 +6,6 @@ public class UnreachableMain {
     }
 
     public void fooBar(){
-        ClassB cb = new ClassB();
-        System.out.println(cb.age);
+        System.out.println();
     }
 }
